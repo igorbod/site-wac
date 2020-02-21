@@ -1,7 +1,17 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
-// @media only screen and (max-width : 1200px)
+@media only screen and (max-width : 1200px)
+  .blog
+    &__item-wrapper
+      grid-template-columns: repeat(3, 1fr)
+    &__item
+      &:nth-child(3)
+        grid-column: 2 / 3
+        grid-row: 1
+      &:nth-child(4)
+        grid-column: 1 / 2
+        grid-row: 2
 
 
 
@@ -30,6 +40,12 @@
     &__text
       font-size: 16px
       line-height: 26px
+
+  .blog
+    &__item-wrapper
+      grid-template-columns: repeat(2, 1fr)
+
+
 
 
 
@@ -67,6 +83,20 @@
       &:first-child
         padding-top: 0
         border-right: none
+
+  .block-form
+    .main-form
+      grid-template-columns: 1fr 1fr
+      grid-gap: $gutter
+
+  .blog
+    &__item-wrapper
+      grid-template-columns: 1fr
+    &__item
+      &:nth-child(3)
+        grid-column: initial
+      &:nth-child(4)
+        grid-column: initial
     
 
 /* Small Devices, Tablets */
@@ -114,8 +144,9 @@
       &:first-child
         padding: 0
   
-
-
+  .block-form
+    .main-form
+      grid-template-columns: 1fr
 
 
 /* Extra Small Devices, Phones */
